@@ -17,7 +17,7 @@ export const ActualTweets: React.FC<ActualTweetsProps> = ({ tags }): React.React
         </ListItem>
         <Divider />
         {tags.map((tag) => (
-          <>
+          <Box key={tag._id}>
             <ListItemButton
               sx={{
                 display: "flex",
@@ -25,7 +25,6 @@ export const ActualTweets: React.FC<ActualTweetsProps> = ({ tags }): React.React
                 alignItems: "flex-start",
                 justifyContent: "flex-start",
               }}
-              key={tag._id}
             >
               <Box>
                 <Typography variant="body2" sx={{ textAlign: "left", fontWeight: 700 }}>
@@ -39,7 +38,7 @@ export const ActualTweets: React.FC<ActualTweetsProps> = ({ tags }): React.React
               </Box>
             </ListItemButton>
             <Divider />
-          </>
+          </Box>
         ))}
       </List>
     </>

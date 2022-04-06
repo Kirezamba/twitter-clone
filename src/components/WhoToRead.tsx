@@ -19,8 +19,8 @@ export const WhoToRead: React.FC<WhoToReadProps> = ({ items }): React.ReactEleme
         </ListItem>
         <Divider />
         {items.map((item) => (
-          <>
-            <ListItemButton key={item._id}>
+          <Box key={item._id}>
+            <ListItemButton>
               <Box sx={{ width: "100%", display: "flex", justifyContent: "space-between" }}>
                 <Box>
                   <Avatar alt={`avatar of ${item.username}`} src={item.avatarUrl} />
@@ -53,7 +53,7 @@ export const WhoToRead: React.FC<WhoToReadProps> = ({ items }): React.ReactEleme
               </Box>
             </ListItemButton>
             <Divider />
-          </>
+          </Box>
         ))}
       </List>
     </>
